@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEBUFF.EU | Coming Soon</title>
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container { text-align: center; }
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            position: relative;
+            animation: glitch 1s linear infinite;
+        }
+        p { color: #888; margin-top: 20px; font-size: 1.2rem; }
+        .loader {
+            width: 50px; height: 5px; background: #333;
+            margin: 30px auto; position: relative; overflow: hidden;
+        }
+        .loader::after {
+            content: ''; position: absolute; left: -50%; top: 0;
+            height: 100%; width: 50%; background: #fff;
+            animation: load 2s infinite ease-in-out;
+        }
+        
+        @keyframes load { 0% { left: -50%; } 100% { left: 150%; } }
+        @keyframes glitch {
+            2%, 64% { transform: translate(2px,0) skew(0deg); }
+            4%, 60% { transform: translate(-2px,0) skew(0deg); }
+            62% { transform: translate(0,0) skew(5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DEBUFF.EU</h1>
+        <div class="loader"></div>
+        <p>SYSTEM INITIALIZING...</p>
+        <p style="font-size: 0.9rem; margin-top: 50px;">Tier 3 Access Only - Coming Soon</p>
+    </div>
+</body>
+</html>
